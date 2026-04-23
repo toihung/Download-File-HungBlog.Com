@@ -1,24 +1,70 @@
-<ul id="postList"></ul>
+<div id="hung-posts"></div>
 
 <script>
-fetch("https://www.hungblog.com/feeds/posts/default?alt=json&max-results=10")
-  .then(res => res.json())
-  .then(data => {
-    const posts = data.feed.entry;
-    const container = document.getElementById("postList");
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("hung-posts");
 
-    posts.forEach(post => {
-      let title = post.title.$t;
+  if (!container) return;
 
-      // Lấy link bài viết
-      let link = post.link.find(l => l.rel === "alternate").href;
+  fetch("https://www.hungblog.com/feeds/posts/default?alt=json&max-results=6")
+    .then(res => res.json())
+    .then(data => {
+      const posts = data.feed.entry;
 
-      // Tạo HTML
-      let li = document.createElement("li");
-      li.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
+      let html = '<div class="hung-grid">';
 
-      container.appendChild(li);
-    });
-  })
-  .catch(err => console.error(err));
+      posts.forEach(post => {
+        let title = post.title.$t;
+
+        let link = post.link.find(l => l.rel === "alternate").href;
+
+        let img = post.media$thumbnail
+          ? post.media$thumbnail.url.replace("s72-c", "s400")
+          : "https://via.placeholder.com/400x250";
+
+        html += `
+          <div class="hung-item">
+            <a href="${link}" target="_blank">
+              <img src="${img}" alt="${title}">
+              <h3>${title}</h3>
+            </a>
+          </div>
+        `;
+      });
+
+      html += "</div>";
+      container.innerHTML = html;
+    })
+    .catch(err => console.log(err));
+});
 </script>
+
+<style>.hung-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.hung-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.hung-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hung-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.hung-item h3 {
+  font-size: 14px;
+  padding: 10px;
+  color: #333;
+}</style>
