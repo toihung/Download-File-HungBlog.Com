@@ -1,176 +1,88 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Hung Blog All In One</title>
-<link href="/favicon.ico" rel='icon' type='image/x-icon' />
-<style>
-body {
-  font-family: Arial;
-}
+  <meta charset="UTF-8">
+  <title>Portfolio của tôi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* TAB MENU */
-.tab {
-  display: flex;
-  background: #5b2c6f;
-}
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-.tab button {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  background: linear-gradient(135deg,#4CAF50,#2E7D32);
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.tab button:hover {
-  background: linear-gradient(135deg,#4CAF50,#2E7D32);
-}
-
-.tab button.active {
-  background: linear-gradient(135deg,#4CAF50,#2E7D32);
-  font-weight: bold;
-}
-
-/* TAB CONTENT */
-.tabcontent {
-  display: none;
-  padding: 20px;
-  background: #f4f4f4;
-}
-
-/* Hiện tab đầu */
-.tabcontent.active {
-  display: block;
-}
-  table{width:100%;margin:20px auto;border-collapse:collapse}th,td{padding:10px 15px;text-align:left;border:1px solid #ccc}th{background-color:#f2f2f2}.table-full{width:100%}table{width:100%;margin:30px auto;border-collapse:collapse;font-family:Arial,sans-serif;font-size:15px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.1);border-radius:8px;overflow:hidden}th{background:linear-gradient(135deg,#4CAF50,#2E7D32);color:white;padding:12px;text-transform:uppercase;letter-spacing:0.5px}td{padding:12px;border-bottom:1px solid #eee}tr:nth-child(even){background-color:#f9f9f9}tr:hover{background-color:#f1f7ff;transition:0.3s}a{color:#1a73e8;text-decoration:none;font-weight:500}a:hover{text-decoration:underline}td:first-child,th:first-child{text-align:center;width:60px}td:nth-child(2),th:nth-child(2){width:40%} 
-  .download{background:#4CAF50;color:white;padding:6px 12px;border-radius:5px;text-decoration:none}.download:hover{background:#388E3C}
-</style>
-
+  <style>
+    body { font-family: Arial; }
+    .hero {
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .section { padding: 60px 20px; }
+    .card:hover { transform: scale(1.05); transition: 0.3s; }
+  </style>
 </head>
+
 <body>
-<center><img src='/hung-blog-webp.png'/></center>
-<h2 style="text-align:center;">Hùng Blog Share Theme And Tips</h2>
 
-<div class="tab">
-  <button class="tablinks active" onclick="openTab(event, 'congnghe1')">Theme Blogger</button>
-  <button class="tablinks" onclick="openTab(event, 'congnghe2')">Theme WordPress</button>
-  <button class="tablinks" onclick="openTab(event, 'cuocsong')">Tips HTML, CSS, JAVASCRIPT...</button>
+<!-- HERO -->
+<div class="hero">
+  <h1>Xin chào, tôi là [Tên bạn]</h1>
+  <p>Lập trình viên | Designer | Freelancer</p>
 </div>
 
-<!-- TAB 1 -->
-<div id="congnghe1" class="tabcontent active">
- <!-- <h3>Theme Blogger</h3> -->
-    <table> <!-- border="1" style="border-collapse: collapse; width: 50%; -->
-  <thead>
-   <!-- <tr style="background-color: #f2f2f2;">
-      <th>STT</th>
-      <th>Name</th>
-      <th>🚀 Demo</th>
-      <th>📥 Download</th>
-    </tr> -->
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Template Plus UI Original</td>
-       <td><a href='https://hungblog.com' target='_blank'>🔗 Demo Plus UI Original</a></td>
-      <td><a class='download' href='https://hungblog.com/'>Download Plus UI Original</a></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Template NemeSis Free Blogger</td>
-       <td><a href='https://nemesis-fbt.blogspot.com/' target='_blank'>🔗 Demo NemeSis Blogger</a></td>
-      <td><a class='download' href='/upload/Nemesis.zip' target='_blank'>Download Nemesis</a></td>
-    </tr>
-
-     <tr>
-      <td>3</td>
-      <td>Template PixWork Seo</td>
-      <td><a href='https://pixer-templatesyard.blogspot.com/' target='_blank'>🔗 Demo PixWork Blogger</a></td>
-      <td><a class='download' href='/upload/Pixer.zip' target='_blank'>Download PixWork</a></td>
-    </tr>
-     <tr>
-      <td>4</td>
-      <td>Template Trendy Blogger</td>
-      <td><a href='https://trendy-beautytemplates.blogspot.com/' target='_blank'>🔗 Demo Trendy Blogger</a></td>
-      <td><a class='download' href='/upload/Trendy.zip' target='_blank'>Download Trendy</a></td>
-    </tr>
-
-
-      <tr>
-      <td>5</td>
-      <td>Template Cleanify Blogger</td>
-      <td><a href='https://demo-hungprovn.blogspot.com/' target='_blank'>🔗 Demo Cleanify Blogger</a></td>
-      <td><a class='download' href='/upload/Cleanify.zip' target='_blank'>Download Cleanify</a></td>
-    </tr>
-
-     <tr>
-      <td>6</td>
-      <td>Template Webium Blogger</td>
-      <td><a href='https://webium-hungblog.blogspot.com/' target='_blank'>🔗 Demo Webium Blogger</a></td>
-      <td><a class='download' href='/upload/Webium.zip' target='_blank'>Download Webium</a></td>
-    </tr>
-
-     <tr>
-      <td>7</td>
-      <td>Template SuperMag Blogger</td>
-      <td><a href='https://supermag-templateify.blogspot.com/' target='_blank'>🔗 Demo SuperMag Blogger</a></td>
-      <td><a class='download' href='/upload/SuperMag.rar' target='_blank'>Download SuperMag</a></td>
-    </tr>
-
-<tr>
-      <td>8</td>
-      <td>Template JetTheme Blogger</td>
-      <td><a href='https://jettheme-tetora.blogspot.com/' target='_blank'>🔗 Demo JetTheme Blogger</a></td>
-      <td><a class='download' href='/upload/JetTheme.rar' target='_blank'>Download JetTheme</a></td>
-    </tr>
-
-    <tr>
-      <td>9</td>
-      <td>Template Speedy Blogger</td>
-      <td><a href='https://speedynz.blogspot.com/' target='_blank'>🔗 Demo Speedy Blogger</a></td>
-      <td><a class='download' href='/upload/Speedy.rar' target='_blank'>Download Speedy</a></td>
-    </tr>
-    
-  </tbody>
-      
-</table>
+<!-- GIỚI THIỆU -->
+<div class="section container text-center">
+  <h2>Giới thiệu</h2>
+  <p>Tôi là một người đam mê công nghệ và thiết kế web.</p>
 </div>
 
-<!-- TAB 2 -->
-<div id="congnghe2" class="tabcontent">
-  <h3>Theme WordPress</h3>
-  <p>Đang cập nhật nội dung</p>
+<!-- KỸ NĂNG -->
+<div class="section bg-light">
+  <div class="container">
+    <h2 class="text-center">Kỹ năng</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h5>HTML</h5>
+      </div>
+      <div class="col-md-4">
+        <h5>CSS</h5>
+      </div>
+      <div class="col-md-4">
+        <h5>JavaScript</h5>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- TAB 3 -->
-<div id="cuocsong" class="tabcontent">
-  <h3>Tips HTML, CSS, JAVASCRIPT...</h3>
-  <p>Đang cập nhật nội dung thủ thuật.</p>
+<!-- DỰ ÁN -->
+<div class="section container">
+  <h2 class="text-center">Dự án</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Website bán hàng</h5>
+        <p>Mô tả ngắn về dự án.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>App quản lý</h5>
+        <p>Mô tả ngắn về dự án.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Portfolio cá nhân</h5>
+        <p>Mô tả ngắn về dự án.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<script>
-function openTab(evt, tabName) {
-  let i, tabcontent, tablinks;
-
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.remove("active");
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active");
-  }
-
-  document.getElementById(tabName).classList.add("active");
-  evt.currentTarget.classList.add("active");
-}
-</script>
+<!-- LIÊN HỆ -->
+<div class="section bg-dark text-white text-center">
+  <h2>Liên hệ</h2>
+  <p>Email: example@gmail.com</p>
+</div>
 
 </body>
 </html>
